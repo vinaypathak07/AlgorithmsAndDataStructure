@@ -1,4 +1,4 @@
-// O(N) : Cycle Detection Algorithm Using DSU
+// Optimizing DSU To Find Cycle In Undirected Graph
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -49,6 +49,7 @@ public:
 	bool cycleDetection() {
 		int *parent = new int[V];
 		int *rank = new int[V];
+
 		// DSU logic to check if graph contains a cycle or not
 		for (int i = 0; i < V; i++) {
 			parent[i] = -1;
@@ -68,6 +69,7 @@ public:
 				return true;
 			}
 		}
+		// Uncomment this to print the parent and rank array
 		// cout << endl;
 		// for (int i = 0; i < V; i++) {
 		// 	cout << parent[i] << ",";
